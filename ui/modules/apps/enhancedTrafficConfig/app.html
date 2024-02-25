@@ -1,0 +1,45 @@
+<style>
+    .enhance-traffic-config {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+
+        .column {
+            display: flex;
+            flex-flow: row;
+            justify-self: stretch;
+            gap: 10px;
+
+            &.center {
+                align-self: center;
+            }
+
+            &:last-of-type {
+                margin-top: auto;
+            }
+        }
+
+        .parameter {
+            padding: 3px 6px 3px 0px;
+            white-space: nowrap;
+        }
+
+        input[type=number]  {
+            width: 60px;
+            padding: 2px;
+        }
+    }
+</style>
+
+<form class="bngApp enhance-traffic-config">
+    <span class="column">
+        <label>Traffic Aggression: <input type="number" min="0" max="2" step="0.1" ng-model="formStatus.baseAggression"/></label>
+    </span>
+
+    <span class="column center">
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="submit(form)" value="Save" />
+    </span>
+</form>
