@@ -4,13 +4,13 @@
     "version": "0.1",
     "description": "This is the ui that the user will use to have more fine control over the traffic.",
     "directive": "enhancedTrafficConfig",
-    "domElement": "<enhanced-traffic-config> </enhanced-traffic-config>",
+    "domElement": "<enhanced-traffic-config></enhanced-traffic-config>",
     "css": {
         "bottom": "0px",
         "left": "200px",
         "width": "200px",
         "height": "100px",
-        "min-width": "150px",
-        "min-height": "50px"
+        "min-width": "200px",
+        "min-height": "100px"
     }
 }

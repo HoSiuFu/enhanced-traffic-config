@@ -4,7 +4,7 @@ angular.module('beamng.apps')
 })
 .directive('enhancedTrafficConfig', [function() {
     return {
-        templateUrl: '/ui/modules/apps/enhancedTraficConfig/app.html',
+        templateUrl: '/ui/modules/apps/enhancedTrafficConfig/app.html',
         replace: true,
         restrict: 'EA',
         scope: true,
