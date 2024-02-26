@@ -8,20 +8,20 @@ angular.module('beamng.apps')
         replace: true,
         restrict: 'EA',
         scope: true,
-        controller: ['$log', '$scope', function ($log, $scope) {
-            $scope.defaultForm = {
+        link: function (scope, element, attrs) {
+            scope.defaultForm = {
                 'baseAggression': Transit_Options.aggression
             }
-            $scope.formStatus = angular.copy(defaultForm)
+            scope.formStatus = angular.copy(defaultForm)
 
-            $scope.submit = function (form) {
+            scope.onSubmit = function (form) {
                 bngApi.engineLua(`extensions.gameplay_traffic.setTrafficVars( ${bngApi.serializeToLua(form)} )`);
             }
 
-            $scope.reset = function () {
-                $scope.formStatus = angular.copy($scope.defaultForm)
-                bngApi.engineLua(`extensions.gameplay_traffic.setTrafficVars( ${bngApi.serializeToLua($scope.defaultForm)} )`)
+            scope.onReset = function () {
+                scope.formStatus = angular.copy(scope.defaultForm)
+                bngApi.engineLua(`extensions.gameplay_traffic.setTrafficVars( ${bngApi.serializeToLua(scope.defaultForm)} )`)
             }
-        }]
+        }
     }
 }])
