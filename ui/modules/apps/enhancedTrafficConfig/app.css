@@ -1,15 +1,9 @@
-:root {
+.app {
     --etc-text-white: #ffffff;
     --etc-placeholder-gray: #d6d6d6;
 }
 
-.enhanced-traffic-config {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.enhanced-traffic-config form.form {
+.app .enhanced-traffic-config {
     margin-top: 1rem;
     display: flex;
     flex-flow: column;
@@ -18,33 +12,33 @@
     overflow-y: auto;
 }
 
-.enhanced-traffic-config form.form 
+.app .enhanced-traffic-config
 .category {
     display: flex;
     flex-flow: column;
     gap: 0.625rem;
 }
 
-.enhanced-traffic-config form.form
+.app .enhanced-traffic-config
 .category .category-title {
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--etc-text-white);
 }
 
-.enhanced-traffic-config form.form
+.app .enhanced-traffic-config
 .category .category-input {
     font-weight: 400;
     font-size: 1rem;
     color: var(--etc-text-white);
 }
 
-.enhanced-traffic-config form.form
+.app .enhanced-traffic-config
 .category .category-input::placeholder{
     color: var(--etc-placeholder-gray);
 }
         
-.enhanced-traffic-config form.form
+.app .enhanced-traffic-config
 .button-div {
     position: absolute;
     top: 1rem;
