@@ -1,8 +1,5 @@
 angular.module('beamng.apps')
-.constant('Transit_Options', {
-    defaultAggression: 0.3
-})
-.directive('enhancedTrafficConfig', ['Transit_Options',function() {
+.directive('enhancedTrafficConfig', [function() {
     return {
         templateUrl: '/ui/modules/apps/enhancedTrafficConfig/app.html',
         replace: true,
@@ -10,7 +7,7 @@ angular.module('beamng.apps')
         scope: true,
         link: function (scope, element, attrs) {
             scope.defaultForm = {
-                'baseAggression': Transit_Options.aggression
+                'baseAggression': 0.3
             }
             scope.formStatus = angular.copy(defaultForm)
 
