@@ -2,7 +2,7 @@ angular.module('beamng.apps')
 .constant('Transit_Options', {
     defaultAggression: 0.3
 })
-.directive('enhancedTrafficConfig', [function() {
+.directive('enhancedTrafficConfig', ['Transit_Options',function() {
     return {
         templateUrl: '/ui/modules/apps/enhancedTrafficConfig/app.html',
         replace: true,
