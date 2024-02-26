@@ -1,9 +1,9 @@
-.app {
+:root {
     --etc-text-white: #ffffff;
     --etc-placeholder-gray: #d6d6d6;
 }
 
-.app .enhanced-traffic-config {
+.enhanced-traffic-config {
     margin-top: 1rem;
     display: flex;
     flex-flow: column;
@@ -12,33 +12,33 @@
     overflow-y: auto;
 }
 
-.app .enhanced-traffic-config
+.enhanced-traffic-config
 .category {
     display: flex;
     flex-flow: column;
     gap: 0.625rem;
 }
 
-.app .enhanced-traffic-config
+.enhanced-traffic-config
 .category .category-title {
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--etc-text-white);
 }
 
-.app .enhanced-traffic-config
+.enhanced-traffic-config
 .category .category-input {
     font-weight: 400;
     font-size: 1rem;
     color: var(--etc-text-white);
 }
 
-.app .enhanced-traffic-config
+.enhanced-traffic-config
 .category .category-input::placeholder{
     color: var(--etc-placeholder-gray);
 }
         
-.app .enhanced-traffic-config
+.enhanced-traffic-config
 .button-div {
     position: absolute;
     top: 1rem;
