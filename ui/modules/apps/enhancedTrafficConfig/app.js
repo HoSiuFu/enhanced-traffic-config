@@ -9,7 +9,7 @@ angular.module('beamng.apps')
             scope.defaultForm = {
                 'baseAggression': 0.3
             }
-            scope.formStatus = angular.copy(defaultForm)
+            scope.formStatus = angular.copy(scope.defaultForm)
 
             scope.onSubmit = function (form) {
                 bngApi.engineLua(`extensions.gameplay_traffic.setTrafficVars( ${bngApi.serializeToLua(form)} )`);
