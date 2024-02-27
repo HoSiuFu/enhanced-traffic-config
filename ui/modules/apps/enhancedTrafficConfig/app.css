@@ -15,16 +15,36 @@
 .enhanced-traffic-config {
     display: flex;
     flex-flow: column;
-    gap: 1.25rem;
     align-self: stretch;
     overflow-y: auto;
+    height: 100%;
 }
 
 .enhanced-traffic-config
+.mult-cat-col {
+    display: flex;
+    flex-flow: row wrap;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.enhanced-traffic-config .category, 
+.enhanced-traffic-config .mult-cat-col 
 .category {
     display: flex;
     flex-flow: column;
     gap: 0.625rem;
+    margin-top: 1.25rem;
+}
+
+.enhanced-traffic-config .mult-cat-col
+.category {
+    min-width: 8rem;
+    max-width: 100%;
+    flex: 1;
+    margin-top: unset;
 }
 
 .enhanced-traffic-config

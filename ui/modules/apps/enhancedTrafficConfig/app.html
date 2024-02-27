@@ -12,6 +12,34 @@
     </h1>
 
     <form class="enhanced-traffic-config">
+        <span class="mult-cat-col">
+            <span class="category">
+                <label
+                    class="category-title"
+                    for="ai-mode">
+                    Ai Mode
+                </label>
+                <md-select ng-model="formStatus.aiMode">
+                    <md-option ng-value="opt.val" ng-repeat="opt in formOptions.aiMode">
+                        {{opt.txt}}
+                    </md-option>
+                </md-select>
+            </span>
+
+            <span class="category">
+                <label
+                    class="category-title"
+                    for="ai-mode">
+                    Ai Awareness
+                </label>
+                <md-select ng-model="formStatus.aiAware">
+                    <md-option ng-value="opt.val" ng-repeat="opt in formOptions.aiAware">
+                        {{opt.txt}}
+                    </md-option>
+                </md-select>
+            </span>
+        </span>
+
         <span class="category">
             <label 
                 class="category-title" 
@@ -27,6 +55,37 @@
                 max="1" 
                 step="0.01" 
                 ng-model="formStatus.baseAggression" />
+        </span>
+        
+        <span class="category">
+            <label 
+                class="category-title" 
+                for="drivability">
+                Road Drivability
+            </label>
+            <input 
+                class="category-input"
+                id="drivability" 
+                name="drivability" 
+                type="number"
+                min="0" 
+                max="0.9" 
+                step="0.1" 
+                ng-model="formStatus.minRoadDrivability" />
+        </span>
+
+        <span class="category">
+            <label 
+                class="category-title" 
+                for="random-events">
+                Enable Random Events
+            </label>
+            <input 
+                class="category-input"
+                id="random-events" 
+                name="random-events" 
+                type="checkbox" 
+                ng-model="formStatus.enableRandomEvents" />
         </span>
 
         <span class="button-div">
