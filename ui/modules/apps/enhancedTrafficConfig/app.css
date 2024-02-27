@@ -15,7 +15,6 @@
 .enhanced-traffic-config {
     display: flex;
     flex-flow: column;
-    gap: 1.25rem;
     align-self: stretch;
     overflow-y: auto;
     height: 100%;
@@ -28,6 +27,7 @@
     align-self: stretch;
     align-items: flex-start;
     gap: 1rem;
+    margin-top: 1.25rem;
 }
 
 .enhanced-traffic-config .category, 
@@ -36,6 +36,7 @@
     display: flex;
     flex-flow: column;
     gap: 0.625rem;
+    margin-top: 1.25rem;
 }
 
 .enhanced-traffic-config .mult-cat-col
@@ -43,6 +44,7 @@
     min-width: 8rem;
     max-width: 100%;
     flex: 1;
+    margin-top: unset;
 }
 
 .enhanced-traffic-config
