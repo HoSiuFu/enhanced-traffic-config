@@ -1,0 +1,54 @@
+:root {
+    --etc-text-white: #ffffff;
+    --etc-placeholder-gray: #d6d6d6;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-self: stretch;
+    text-align: center;
+    margin-top: 0.125rem;
+    margin-bottom: 0.625rem;
+}
+
+.enhanced-traffic-config {
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+    align-self: stretch;
+    overflow-y: auto;
+}
+
+.enhanced-traffic-config
+.category {
+    display: flex;
+    flex-flow: column;
+    gap: 0.625rem;
+}
+
+.enhanced-traffic-config
+.category .category-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--etc-text-white);
+}
+
+.enhanced-traffic-config
+.category .category-input {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--etc-text-white);
+}
+
+.enhanced-traffic-config
+.category .category-input::placeholder{
+    color: var(--etc-placeholder-gray);
+}
+
+.enhanced-traffic-config .button-div {
+    margin-top: auto;
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-end;
+}
