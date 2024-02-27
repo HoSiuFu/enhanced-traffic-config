@@ -9,12 +9,12 @@ angular.module('beamng.apps')
             const DEFAULT_TRAFFIC_CONFIG = {
                 baseAggression: 0.3,
                 minRoadDrivability: 0.25,
-                speedLimit: null,
                 aiMode: 'traffic',
                 aiAware: 'auto',
                 enableRandomEvents: false,
             }
             scope.formStatus = angular.copy(DEFAULT_TRAFFIC_CONFIG)
+            scope.showAggression = true
             scope.formOptions = {
                 aiMode: [
                     { txt: 'Disabled', val: 'disabled'},
@@ -25,7 +25,7 @@ angular.module('beamng.apps')
                     { txt: 'Chase', val:'chase' },
                     { txt: 'Follow', val:'follow' },
                     { txt: 'Flee', val:'flee' },
-                    { txt: 'Chase', val:'chase' },
+                    { txt: 'Stopping', val:'stop' },
                 ],
             
                 aiAware: [

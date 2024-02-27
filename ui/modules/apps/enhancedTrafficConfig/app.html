@@ -25,6 +25,7 @@
                     </md-option>
                 </md-select>
             </span>
+
             <span class="category">
                 <label
                     class="category-title"
@@ -38,6 +39,7 @@
                 </md-select>
             </span>
         </span>
+
         <span class="category">
             <label 
                 class="category-title" 
@@ -53,6 +55,37 @@
                 max="1" 
                 step="0.01" 
                 ng-model="formStatus.baseAggression" />
+        </span>
+        
+        <span class="category">
+            <label 
+                class="category-title" 
+                for="drivability">
+                Road Drivability
+            </label>
+            <input 
+                class="category-input"
+                id="drivability" 
+                name="drivability" 
+                type="number"
+                min="0" 
+                max="0.9" 
+                step="0.1" 
+                ng-model="formStatus.minRoadDrivability" />
+        </span>
+
+        <span class="category">
+            <label 
+                class="category-title" 
+                for="random-events">
+                Enable Random Events
+            </label>
+            <input 
+                class="category-input"
+                id="random-events" 
+                name="random-events" 
+                type="checkbox" 
+                ng-model="formStatus.enableRandomEvents" />
         </span>
 
         <span class="button-div">
