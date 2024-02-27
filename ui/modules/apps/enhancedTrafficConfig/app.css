@@ -21,10 +21,27 @@
 }
 
 .enhanced-traffic-config
+.mult-cat-col {
+    display: flex;
+    flex-flow: row wrap;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.enhanced-traffic-config .category, 
+.enhanced-traffic-config .mult-cat-col 
 .category {
     display: flex;
     flex-flow: column;
     gap: 0.625rem;
+}
+
+.enhanced-traffic-config .mult-cat-col
+.category {
+    min-width: 8rem;
+    max-width: 100%;
+    flex: 1;
 }
 
 .enhanced-traffic-config
