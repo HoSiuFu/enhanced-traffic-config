@@ -6,7 +6,18 @@
     type="text/css" 
     rel="stylesheet" 
     href="/ui/modules/apps/enhancedTrafficConfig/app.css" />
+
+    <h1 class="title">
+        Enhanced Traffic Configuration
+    </h1>
+
     <form class="enhanced-traffic-config">
+
+        <span class="button-div">
+            <input class="md-warn md-raised md-button md-default-them" type="submit" ng-click="onSubmit(formStatus)" value="Save" />
+            <input class="md-accent md-raised md-button md-default-them" type="button" ng-click="onReset()" value="Reset" />
+        </span>
+
         <span class="category">
             <label 
                 class="category-title" 
@@ -17,16 +28,11 @@
                 class="category-input"
                 id="aggression" 
                 name="aggression" 
-                type="number" 
+                type="number"
                 min="0" 
                 max="1" 
                 step="0.01" 
                 ng-model="formStatus.baseAggression" />
-        </span>
-
-        <span class="button-div">
-            <input type="button" ng-click="onReset()" value="Reset" />
-            <input type="submit" ng-click="onSubmit(formStatus)" value="Save" />
         </span>
     </form>
 </div>

@@ -3,8 +3,26 @@
     --etc-placeholder-gray: #d6d6d6;
 }
 
+.enhanced-traffic-config .button-div {
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.enhanced-traffic-config .button-div
+.button {
+    all: unset;
+    
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2rem;
+    align-self: stretch;
+    text-align: center;
+}
+
 .enhanced-traffic-config {
-    margin-top: 1rem;
     display: flex;
     flex-flow: column;
     gap: 1.25rem;
@@ -21,8 +39,8 @@
 
 .enhanced-traffic-config
 .category .category-title {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
     color: var(--etc-text-white);
 }
 
@@ -36,11 +54,4 @@
 .enhanced-traffic-config
 .category .category-input::placeholder{
     color: var(--etc-placeholder-gray);
-}
-        
-.enhanced-traffic-config
-.button-div {
-    position: absolute;
-    top: 1rem;
-    right: 0;
 }
