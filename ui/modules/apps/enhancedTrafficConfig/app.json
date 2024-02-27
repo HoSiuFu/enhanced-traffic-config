@@ -8,10 +8,10 @@
     "css": {
         "bottom": "0px",
         "left": "200px",
-        "width": "31.25rem",
-        "height": "15.625rem",
-        "min-width": "31.25rem",
-        "min-height": "15.625rem",
+        "width": "38.75rem",
+        "height": "21.25rem",
+        "min-width": "38.75rem",
+        "min-height": "21.25rem",
         "max-width": "80%",
         "max-height": "95%"
     }
