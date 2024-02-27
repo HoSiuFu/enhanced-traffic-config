@@ -4,22 +4,18 @@
 }
 
 .enhanced-traffic-config .button-div {
-    position: sticky;
-    top: 0;
-    right: 0;
-}
-
-.enhanced-traffic-config .button-div
-.button {
-    all: unset;
-    
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-end;
 }
 
 .title {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     align-self: stretch;
     text-align: center;
+    margin-top: 0.125rem;
+    margin-bottom: 0.625rem;
 }
 
 .enhanced-traffic-config {
