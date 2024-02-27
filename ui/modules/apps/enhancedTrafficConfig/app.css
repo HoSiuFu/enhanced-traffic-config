@@ -18,6 +18,7 @@
     gap: 1.25rem;
     align-self: stretch;
     overflow-y: auto;
+    height: 100%;
 }
 
 .enhanced-traffic-config
