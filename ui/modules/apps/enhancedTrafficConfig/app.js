@@ -35,6 +35,10 @@ angular.module('beamng.apps')
                 ]
             }
 
+            scope.onChange = function () {
+                console.log(formStatus)
+            }
+
             scope.onSubmit = function (form) {
                 bngApi.engineLua(`extensions.gameplay_traffic.setTrafficVars( ${bngApi.serializeToLua(form)} )`);
             }
