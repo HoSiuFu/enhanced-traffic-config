@@ -15,7 +15,7 @@ angular.module('beamng.apps')
             }
 
             element.ready(function () {
-                bngApi.engineLua('extensions.ect_settings.loadEtcSettings()', (settings) => {
+                bngApi.engineLua('extensions.ectSettings.loadEtcSettings()', (settings) => {
                     if (settings) {
                         scope.formStatus = {
                             baseAggression: settings.baseAggression,
