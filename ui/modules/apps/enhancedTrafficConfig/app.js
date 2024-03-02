@@ -15,7 +15,19 @@ angular.module('beamng.apps')
             }
 
             element.ready(function () {
-                bngApi.engineLua('extensions')
+                bngApi.engineLua('extensions.ect_settings.loadEtcSettings()', (settings) => {
+                    if (settings) {
+                        scope.formStatus = {
+                            baseAggression: settings.baseAggression,
+                            minRoadDrivability: settings.minRoadDrivability,
+                            aiMode: settings.aiMode,
+                            aiAware: settings.aiAware,
+                            enableRandomEvents: settings.enableRandomEvents,
+                        }
+                    } else {
+                        scope.formStatus = angular.copy(DEFAULT_TRAFFIC_CONFIG)
+                    }
+                })
 
                 scope.formOptions = {
                     aiMode: [
