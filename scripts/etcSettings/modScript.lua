@@ -1,2 +1,1 @@
-load('etcSettings')
-setExtensionUnloadMode('etcSettings', 'manual')
+registerCodeModule('etcSettings')
