@@ -13,6 +13,7 @@ angular.module('beamng.apps')
                 aiAware: 'auto',
                 enableRandomEvents: false,
             }
+            scope.loading = true
 
             element.ready(function () {
                 bngApi.engineLua('extensions.core_settings_etcSettings.loadEtcSettings()', (settings) => {
@@ -27,6 +28,8 @@ angular.module('beamng.apps')
                     } else {
                         scope.formStatus = angular.copy(DEFAULT_TRAFFIC_CONFIG)
                     }
+
+                    scope.loading = false
                 })
 
                 scope.formOptions = {
