@@ -1,15 +1,14 @@
 local M = {}
+M.dependencies = { 'gameplay_traffic' }
 local logTag = 'enhancedTrafficConfig'
-local settings = require('settings')
-local traffic = require('lua/ge/extensions/gameplay/traffic')
 
-M.etcSettingsPath = settings.path...'etcModSettings.json'
-M.etcCurrentSettings = jsonReadFile(M.etcSettings) or traffic.getTrafficVars()
+M.etcSettingsPath = '/settings/etcModSettings.json'
+M.etcCurrentSettings = jsonReadFile(M.etcSettingsPath) or extensions.gameplay_traffic.getTrafficVars()
 
 
 local function loadEtcSettings()
-    log('I', logTag, 'Loading last applied settings. \n Settings: '..dump(currentSettings))
-    return currentSettings
+    log('I', logTag, 'Loading last applied settings. \n Settings: '..dumps(M.etcCurrentSettings))
+    return M.etcCurrentSettings
 end
 
 local function saveEtcSettings(settings)

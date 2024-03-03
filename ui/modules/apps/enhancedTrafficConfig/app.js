@@ -15,7 +15,7 @@ angular.module('beamng.apps')
             }
 
             element.ready(function () {
-                bngApi.engineLua('etcSettings.loadEtcSettings()', (settings) => {
+                bngApi.engineLua('extensions.core_settings_etcSettings.loadEtcSettings()', (settings) => {
                     if (settings) {
                         scope.formStatus = {
                             baseAggression: settings.baseAggression,
@@ -53,11 +53,13 @@ angular.module('beamng.apps')
 
             scope.onSubmit = function (form) {
                 bngApi.engineLua(`etcSettings.setTrafficVars( ${bngApi.serializeToLua(form)} )`);
+                bngApi.engineLua(`extensions.core_settings_etcSettings.saveEtcSettings( ${bngApi.serializeToLua(form)} )`)
             }
 
             scope.onReset = function () {
                 scope.formStatus = angular.copy(DEFAULT_TRAFFIC_CONFIG)
                 bngApi.engineLua(`etcSettings.setTrafficVars( ${bngApi.serializeToLua(scope.defaultForm)} )`)
+                bngApi.engineLua(`extensions.core_settings_etcSettings.saveEtcSettings( ${bngApi.serializeToLua(DEFAULT_TRAFFIC_CONFIG)} )`)
             }
         }
     }
