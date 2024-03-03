@@ -11,7 +11,11 @@
         Enhanced Traffic Configuration
     </h1>
 
-    <form class="enhanced-traffic-config">
+    <form ng-if="loading" class="enhanced-traffic-config">
+        Loading...
+    </form>
+
+    <form ng-if="!loading" class="enhanced-traffic-config">
         <span class="mult-cat-col">
             <span class="category">
                 <label
