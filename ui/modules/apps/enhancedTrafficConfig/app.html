@@ -16,10 +16,10 @@
             <span class="category">
                 <label
                     class="category-title"
-                    for="ai-mode">
+                    for="etc-ai-mode">
                     Ai Mode
                 </label>
-                <md-select ng-model="formStatus.aiMode">
+                <md-select name="etc-ai-mode" id="etc-ai-mode" ng-model="formStatus.aiMode">
                     <md-option ng-value="opt.val" ng-repeat="opt in formOptions.aiMode">
                         {{opt.txt}}
                     </md-option>
@@ -32,7 +32,7 @@
                     for="ai-mode">
                     Ai Awareness
                 </label>
-                <md-select ng-model="formStatus.aiAware">
+                <md-select name="etc-ai-aware" id="etc-ai-aware" ng-model="formStatus.aiAware">
                     <md-option ng-value="opt.val" ng-repeat="opt in formOptions.aiAware">
                         {{opt.txt}}
                     </md-option>
@@ -43,46 +43,48 @@
         <span class="category">
             <label 
                 class="category-title" 
-                for="aggression">
+                for="etc-aggression">
                 Traffic Aggression
             </label>
             <input 
                 class="category-input"
-                id="aggression" 
-                name="aggression" 
+                id="etc-aggression" 
+                name="etc-aggression" 
                 type="number"
                 min="0" 
                 max="1" 
                 step="0.01" 
-                ng-model="formStatus.baseAggression" />
+                ng-model="formStatus.baseAggression"
+                ng-change="onChange()" />
         </span>
         
         <span class="category">
             <label 
                 class="category-title" 
-                for="drivability">
+                for="etc-drivability">
                 Road Drivability
             </label>
             <input 
                 class="category-input"
-                id="drivability" 
-                name="drivability" 
+                id="etc-drivability" 
+                name="etc-drivability" 
                 type="number"
                 min="0" 
                 max="0.9" 
-                step="0.1" 
-                ng-model="formStatus.minRoadDrivability" />
+                step="0.01" 
+                ng-model="formStatus.minRoadDrivability"
+                ng-change="onChange()" />
         </span>
 
         <span class="category">
             <label 
                 class="category-title" 
-                for="random-events">
+                for="etc-random-events">
                 Enable Random Events
             </label>
             <input 
                 class="category-input"
-                id="random-events" 
+                id="etc-random-events" 
                 name="random-events" 
                 type="checkbox" 
                 ng-model="formStatus.enableRandomEvents" />
